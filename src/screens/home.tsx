@@ -3,7 +3,7 @@ import { SafeAreaView, Text } from 'react-native';
 export function Home(){
     return (
         <SafeAreaView>
-            <Text> Oi </Text>
+            <Text className = 'text-pink-300'> Oi </Text>
         </SafeAreaView>
     )
 }
