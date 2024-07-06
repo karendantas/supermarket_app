@@ -1,5 +1,5 @@
 import { View, Text } from "react-native";
-import { Ionicons } from '@expo/vector-icons';
+import { Ionicons, Feather } from '@expo/vector-icons';
 
 export function Header (){
     return (
@@ -9,13 +9,14 @@ export function Header (){
                 <Text className='font-bold text-2xl text-orange-f'> Frutífeiras </Text>
             </View>
 
-            <View>
-                <View className="bg-amber-800 h-5 w-5 rounded-full items-center justify-center absolute z-20 right-0"> 
+            <View className="relative">
+                <View className="bg-amber-800 h-5 w-5 rounded-full items-center justify-center absolute z-20 -right-1.5 -top-2"> 
                     <Text className="text-white  text-[12px]">
                         1
                     </Text> 
                 </View>
-                <Ionicons name="cart" size={38} color="orange" />
+           
+                <Feather name = "shopping-bag" size = {30} color="orange"/>
             </View>
         </View>
     )
