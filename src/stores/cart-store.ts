@@ -8,7 +8,7 @@ type cartStoreType = {
     remove_from_cart: (productId: string) => void,
     clear_cart: () => void,
 }
-export const cartStore = create<cartStoreType>((set) => ({
+export const useCartStore = create<cartStoreType>((set) => ({
     productsInCart: [] ,
     add_to_cart: (newProduct: ProductType) => set((state) => ({
         productsInCart: cartInMemory.add(state.productsInCart, newProduct),

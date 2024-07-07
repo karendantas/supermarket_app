@@ -1,14 +1,24 @@
-import { Button } from "@/components/button";
-import { Header } from "@/components/header";
+
+import { useCartStore } from "@/stores/cart-store";
 import { FRUITS } from "@/utils/data/products";
-import { Link, Redirect, useLocalSearchParams } from "expo-router";
+import { Link, Redirect, useLocalSearchParams, useNavigation } from "expo-router";
 import { View, Image, Text } from "react-native";
 
-export default function ProductDetail(){
-    const {id} = useLocalSearchParams()
-    console.log(id)
+import { Button } from "@/components/button";
 
+export default function ProductDetail(){
+    const cartStore = useCartStore()
+    const navigation = useNavigation()
+
+    const {id} = useLocalSearchParams()
     const currentProduct = FRUITS.find((item) => item.id === id)
+    
+    
+    function handleAddToCart(){
+        cartStore.add_to_cart(currentProduct!)
+        navigation.goBack()
+        
+    }
     
     if (!currentProduct){
         return <Redirect href="/"/>
@@ -16,9 +26,7 @@ export default function ProductDetail(){
     
     return (
         <View className="flex-1">
-            <Header cartQuantity={8}/>
-
-            {   
+           {   
                 <View className="flex-1">
 
                     <Image source={currentProduct.image} className="h-auto w-full" />
@@ -31,7 +39,9 @@ export default function ProductDetail(){
                     </View>
                     
                     <View className="px-4 pb-4">
-                        <Button title="Adicionar ao carrinho" />
+                        <Button
+                            onPress={handleAddToCart} 
+                            title="Adicionar ao carrinho" />
                         <Link href="/" className="text-center font-body text-lg text-amber-900 mt-3"> Voltar </Link>
                     </View>
                 </View>
