@@ -5,6 +5,7 @@ import { Link, Redirect, useLocalSearchParams, useNavigation } from "expo-router
 import { View, Image, Text } from "react-native";
 
 import { Button } from "@/components/button";
+import { FormatCurrency } from "@/utils/functions/format-currency";
 
 export default function ProductDetail(){
     const cartStore = useCartStore()
@@ -31,10 +32,10 @@ export default function ProductDetail(){
 
                     <Image source={currentProduct.image} className="h-auto w-full" />
                     <View className="px-4 flex-1 mt-8">
-                        <Text className="font-heading text-2xl text-bold text-amber-900"> {currentProduct.title} </Text>
-                        <Text className="font-body text-lg text-justify " > {currentProduct.description }</Text>
+                        <Text className="font-heading text-2xl text-bold text-amber-900">{currentProduct.title}</Text>
+                        <Text className="font-body text-lg text-justify " >{currentProduct.description}</Text>
 
-                        <Text className="font-heading text-2xl text-orange-f" > {currentProduct.price} </Text>
+                        <Text className="font-heading text-2xl text-orange-f" >{FormatCurrency(currentProduct.price)}</Text>
 
                     </View>
                     

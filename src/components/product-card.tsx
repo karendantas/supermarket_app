@@ -1,4 +1,5 @@
 import {  ProductType } from "@/@types/product";
+import { FormatCurrency } from "@/utils/functions/format-currency";
 import { forwardRef } from "react";
 import { Image, Pressable, PressableProps, Text, View } from "react-native";
 
@@ -17,11 +18,11 @@ export const ProductCard = forwardRef<PressableProps,ProductCartProps>(({data, .
 
             <View className="items-start px-5 flex-1 justify-start">
              
-                <Text className="font-heading text-xl leading-6 "> {data.title} </Text>
-                {data.quantity && <Text className="text-body font-xs"> x {data.quantity} </Text> }
+                <Text className="font-heading text-xl leading-6 ">{data.title}</Text>
+                {data.quantity && <Text className="text-body font-xs"> x {data.quantity}</Text> }
                     
-                <Text className="font-body text-xs text-justify" > {data.description} </Text>
-                <Text className="text-orange-f font-body text-lg"> {data.price}</Text>
+                <Text className="font-body text-xs text-justify">{data.description}</Text>
+                <Text className="text-orange-f font-body text-lg">{FormatCurrency(data.price)}</Text>
             </View>
             
         </Pressable>
