@@ -4,6 +4,7 @@ import { FRUITS } from '@/utils/data/products';
 
 import { Header } from '@/components/header';
 import { ProductCard } from '@/components/product-card';
+import { Link } from 'expo-router';
 
 export default function Home(){
 
@@ -19,10 +20,12 @@ export default function Home(){
                     data = {FRUITS}
                     keyExtractor={(item) => item.id}
                     renderItem={({item}) => (
-                        <ProductCard 
-                            key = {item.id}
-                            data = {item} 
-                        />
+                        <Link href={`/product/${item.id}`} asChild>
+                            <ProductCard 
+                                key = {item.id}
+                                data = {item} 
+                            />
+                        </Link>
                     )}
                     contentContainerStyle = {{paddingBottom:200}}
                     showsVerticalScrollIndicator = {false}
