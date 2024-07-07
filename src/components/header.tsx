@@ -1,7 +1,10 @@
 import { View, Text } from "react-native";
-import { Ionicons, Feather } from '@expo/vector-icons';
+import { Feather } from '@expo/vector-icons';
 
-export function Header (){
+type HeaderProps = {
+    cartQuantity: number
+}
+export function Header ({cartQuantity}:HeaderProps){
     return (
         <View className='bg-green-y h-32 px-4 w-full items-center justify-between flex-row'>
             <View>
@@ -10,12 +13,13 @@ export function Header (){
             </View>
 
             <View className="relative">
-                <View className="bg-amber-800 h-5 w-5 rounded-full items-center justify-center absolute z-20 -right-1.5 -top-2"> 
-                    <Text className="text-white  text-[12px]">
-                        1
-                    </Text> 
-                </View>
-           
+                {
+                    cartQuantity > 0 && (
+                    <View className="bg-amber-800 h-5 w-5 rounded-full items-center justify-center absolute z-20 -right-1.5 -top-2"> 
+                        <Text className="text-white  text-[12px]"> {cartQuantity} </Text>
+                    </View>
+                    )
+                }
                 <Feather name = "shopping-bag" size = {30} color="orange"/>
             </View>
         </View>

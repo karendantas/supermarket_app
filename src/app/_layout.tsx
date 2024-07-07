@@ -23,11 +23,7 @@ export default function Layout (){
            {
             fontsLoaded 
                 ?
-                <SafeAreaView>
-                    <Header />
                     <Slot />
-                </SafeAreaView>
-
                 : 
                 <Loading />
            }

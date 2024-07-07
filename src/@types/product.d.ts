@@ -1,7 +1,5 @@
+import { FRUITS } from "@/utils/data/products"
+import { ImageProps } from "react-native"
 
-export type ProductType = {
-    title: string,
-    description: string,
-    image: string,
-    price: string
-}
+export type ProductType = (typeof FRUITS)[0]
+    
