@@ -13,6 +13,7 @@ export default function ProductDetail(){
     if (!currentProduct){
         return <Redirect href="/"/>
     }
+    
     return (
         <View className="flex-1">
             <Header cartQuantity={8}/>
