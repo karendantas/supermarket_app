@@ -1,0 +1,76 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Maçã Gala",
+      "category": "Frutas",
+      "price": 5.99,
+      "quantity": "1kg",
+      "description": "Maçã Gala fresca, selecionada, doce e crocante.",
+      "image": "https://i.imgur.com/3GvwNBf.png"
+    },
+    {
+      "id": 2,
+      "name": "Banana Prata",
+      "category": "Frutas",
+      "price": 4.5,
+      "quantity": "1kg",
+      "description": "Banana prata madura, perfeita para consumo e receitas.",
+      "image": "https://i.imgur.com/7GlqDsG.png"
+    },
+    {
+      "id": 3,
+      "name": "Leite Integral",
+      "category": "Bebidas",
+      "price": 6.49,
+      "quantity": "1L",
+      "description": "Leite integral de alta qualidade, fonte de cálcio.",
+      "image": "https://i.imgur.com/3yG2vVx.png"
+    },
+    {
+      "id": 4,
+      "name": "Coca-Cola",
+      "category": "Bebidas",
+      "price": 8.99,
+      "quantity": "2L",
+      "description": "Refrigerante Coca-Cola tradicional.",
+      "image": "https://i.imgur.com/2nCt3Sbl.png"
+    },
+    {
+      "id": 5,
+      "name": "Arroz Branco",
+      "category": "Mercearia",
+      "price": 22.9,
+      "quantity": "5kg",
+      "description": "Arroz branco tipo 1, grãos selecionados.",
+      "image": "https://i.imgur.com/9q3hA0b.png"
+    },
+    {
+      "id": 6,
+      "name": "Feijão Carioca",
+      "category": "Mercearia",
+      "price": 8.9,
+      "quantity": "1kg",
+      "description": "Feijão carioca de alta qualidade, selecionado.",
+      "image": "https://i.imgur.com/l49aYS3.png"
+    },
+    {
+      "id": 7,
+      "name": "Sabonete Dove",
+      "category": "Higiene",
+      "price": 3.49,
+      "quantity": "90g",
+      "description": "Sabonete Dove hidratante para pele macia e suave.",
+      "image": "https://i.imgur.com/3GvwNBf.png"
+    },
+    {
+      "id": 8,
+      "name": "Detergente Ypê",
+      "category": "Limpeza",
+      "price": 2.49,
+      "quantity": "500ml",
+      "description": "Detergente neutro Ypê, mais eficiência na limpeza.",
+      "image": "https://i.imgur.com/7GlqDsG.png"
+    }
+  ]
+}
